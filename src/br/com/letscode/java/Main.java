@@ -57,28 +57,54 @@ public class Main {
         int[] nums = new int[5];
 
         for (int i = 0; i < nums.length; i++) {
-            System.out.printf("Digite o %dº valor: \n",(i+1));
+            System.out.printf("Digite o %dº valor: \n", (i + 1));
             nums[i] = in.nextInt();
 
         }
         //  System.out.println(Arrays.toString(nums));
         System.out.println("Numeros impares: ");
-        for(int i = 0; i < nums.length; i++){
-            if (nums[i]%2!=0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 != 0) {
                 System.out.print(nums[i] + ";");
             }
         }
 
         System.out.println("\nNumeros pares: ");
-        for(int i = 0; i < nums.length; i++){
-            if (nums[i]%2==0){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0) {
                 System.out.print(nums[i] + ";");
             }
         }
-
-
-
     }
+
+    public static void questao04() {
+        /*
+            Escreva um programa que lê 5 números e informa o maior, o menor e a média deles.
+        */
+
+        Scanner in = new Scanner(System.in);
+        int[] nums = new int[5];
+        int maior=0,menor=0;
+        float media;
+
+        for (int i =0;i< nums.length;i++){
+            System.out.printf("Digite o %dº valor: ", i+1);
+            nums[i] = in.nextInt();
+        }
+        for (int i =0;i< nums.length;i++){
+            if(i == 0){
+                maior = nums[i];
+                menor = maior;
+            }else if(nums[i] > maior){
+                maior = nums[i];
+            }
+            if(nums[i] < menor){
+                menor = nums[i];
+            }
+        }
+        media = (float)(maior+menor)/2;
+        System.out.printf("O maior numero é %d, o menor numero é %d e a media dos dois é %.2f",maior,menor,media);
     }
+}
 
 
