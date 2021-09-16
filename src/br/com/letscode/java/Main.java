@@ -12,7 +12,7 @@ public class Main {
 //      questao03();
 //	    questao04();
 //	    questao05();
-//	    questao06();
+	    questao06();
 //	    questao07();
 //	    questao08();
     }
@@ -144,15 +144,18 @@ public class Main {
 
         System.out.printf("Digite uma palavra: ");
         String palavra = in.nextLine();
-
+        char[] letras = new char[palavra.length()];
+        for (int i=0;i<palavra.length();i++){
+            letras[i] = palavra.charAt(i);
+        }
 
         for(int i = 0; i < palavra.length(); i++){
             if((i+1)%2!=0){
-                Character.toUpperCase(palavra.charAt(i));
+                char migra = letras[i];
+                letras[i] = Character.toUpperCase(migra);
             }
         }
-        System.out.println(palavra);
-        System.out.println("Fiz dos jeitos que li mas não deu");
+        System.out.println(letras);
     }
     public static void questao07() {
         /*
