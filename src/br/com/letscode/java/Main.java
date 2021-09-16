@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	    //questao01();
-	    //questao02();
-        //questao03();
-	    //questao04();
-	    //questao05();
-	    //questao06();
-	    //questao07();
-	    questao08();
+//	    questao01();
+//	    questao02();
+//      questao03();
+//	    questao04();
+//	    questao05();
+//	    questao06();
+//	    questao07();
+//	    questao08();
     }
 
     public static void questao01() {
@@ -41,8 +41,11 @@ public class Main {
 
         System.out.println("Digite uma palavra: ");
         String palavra = in.nextLine();
-
-        System.out.println("Não entendi a lógica");
+        int i = palavra.length() - 1;
+        while(i >= 0) {
+            System.out.print(palavra.charAt(i));
+            i--;
+        }
 
 
         }
