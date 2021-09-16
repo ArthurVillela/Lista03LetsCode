@@ -1,6 +1,7 @@
 package br.com.letscode.java;
 
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
 	    //questao04();
 	    //questao05();
 	    //questao06();
-	    //questao07();
+	    questao07();
 	    //questao08();
     }
 
@@ -41,7 +42,7 @@ public class Main {
         System.out.println("Digite uma palavra: ");
         String palavra = in.nextLine();
 
-
+        System.out.println("Não entendi a lógica");
 
 
         }
@@ -137,14 +138,53 @@ public class Main {
          */
 
         Scanner in = new Scanner(System.in);
+
+        System.out.printf("Digite uma palavra: ");
+        String palavra = in.nextLine();
+
+
+        for(int i = 0; i < palavra.length(); i++){
+            if((i+1)%2!=0){
+                Character.toUpperCase(palavra.charAt(i));
+            }
+        }
+        System.out.println(palavra);
+        System.out.println("Fiz dos jeitos que li mas não deu");
     }
     public static void questao07() {
         /*
         Escreva um programa que lê nome e idade de 5 pessoas e ao final informa quem é o mais novo,
         o mais velho e qual a média de idade.
          */
-
         Scanner in = new Scanner(System.in);
+        String[] nomes = {"Arthur", "Pedro","matheus","Carlos","Joao"};
+        int[] idades = {19,31,27,32,15};
+
+
+        String mNovo,mVelho;
+        int idadeMNovo=0, idadeMVelho=0, posiMNovo=0, posiMVelho=0;
+
+        for (int i=0;i< nomes.length;i++) {
+            if(i == 0){
+                idadeMNovo = idades[i];
+                idadeMVelho = idades[i];
+                posiMNovo = i;
+                posiMVelho =i;
+            }else if(idadeMNovo > idades[i]){
+                idadeMNovo = idades[i];
+                posiMNovo = i;
+            }
+            if(idadeMVelho < idades[i]){
+                idadeMVelho = idades[i];
+                posiMVelho =i;
+            }
+        }
+        mNovo = nomes[posiMNovo];
+        mVelho = nomes[posiMVelho];
+        float media = (float)(idadeMNovo+idadeMVelho)/2;
+        System.out.printf("O mais novo é %s com a idade de %d. \nO mais velho é %s com a idade de %d. \nA média das idades dos dois é %.2f",mNovo,idadeMNovo,mVelho,idadeMVelho,media);
+
+
     }
     public static void questao08() {
         /*
@@ -153,6 +193,8 @@ public class Main {
          */
 
         Scanner in = new Scanner(System.in);
+
+
     }
 
 }
