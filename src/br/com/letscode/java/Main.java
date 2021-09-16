@@ -105,6 +105,56 @@ public class Main {
         media = (float)(maior+menor)/2;
         System.out.printf("O maior numero é %d, o menor numero é %d e a media dos dois é %.2f",maior,menor,media);
     }
+    public static void questao05() {
+        /*
+            Escreva um programa que lê o nome de 5 pessoas e armazena numa lista de convidados. Ao final, informe qual o nome mais longo presente na lista.
+         */
+
+        Scanner in = new Scanner(System.in);
+        String[] convidados = new String[5];
+
+        for(int i= 0; i < convidados.length; i++) {
+            System.out.printf("Informe o %dº nome: ",i+1);
+            convidados[i] = in.nextLine();
+        }
+        int nomeMLongo=0, tamanho=0;
+
+        for(int i = 0; i < convidados.length; i++){
+            if(i == 0){
+                tamanho = convidados[i].length();
+                nomeMLongo = i;
+            }else if(convidados[i].length() > tamanho){
+                tamanho = convidados[i].length();
+                nomeMLongo = i;
+            }
+        }
+        System.out.printf("O nome mais longo é %s",convidados[nomeMLongo]);
+    }
+
+    public static void questao06() {
+        /*
+        Escreva um programa que lê uma palavra e escreve de volta com os caracteres ímpares em maiúsculo.
+         */
+
+        Scanner in = new Scanner(System.in);
+    }
+    public static void questao07() {
+        /*
+        Escreva um programa que lê nome e idade de 5 pessoas e ao final informa quem é o mais novo,
+        o mais velho e qual a média de idade.
+         */
+
+        Scanner in = new Scanner(System.in);
+    }
+    public static void questao08() {
+        /*
+       Escreva um programa que lê nome, altura e peso de 5 pessoas, calcula o IMC de cada um e
+       ao final informa se alguém está fora do peso ideal (o IMC ideal é entre 18,5 e 25).
+         */
+
+        Scanner in = new Scanner(System.in);
+    }
+
 }
 
 
