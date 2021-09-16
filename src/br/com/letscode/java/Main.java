@@ -13,8 +13,8 @@ public class Main {
 	    //questao04();
 	    //questao05();
 	    //questao06();
-	    questao07();
-	    //questao08();
+	    //questao07();
+	    questao08();
     }
 
     public static void questao01() {
@@ -193,6 +193,19 @@ public class Main {
          */
 
         Scanner in = new Scanner(System.in);
+        float[] altura = {1.8f,2.0f,1.75f,1.65f,1.90f};
+        float[] peso = {70.6f,80.2f,56.8f,72.6f,65.8f};
+        String[] nomes = {"Arthur", "Pedro","matheus","Carlos","Joao"};
+
+        //IMC = Peso ÷ (Altura × Altura)
+        for(int i = 0;i< altura.length;i++){
+            float imc = peso[i] / (altura[i]*altura[1]);
+            if(imc < 18.5 || imc > 25){
+                System.out.printf("%s está fora do peso ideal, seu imc é de %.2f \n", nomes[i], imc);
+            }
+        }
+
+
 
 
     }
